@@ -1,94 +1,124 @@
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: rgba(0, 0, 0, 0.928);
-        color: aliceblue;
-      }
-      header {
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        font-size: larger;
-      }
-      header button {
-        /* background-color: white; */
-        color: black;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      header button span{
-        color: rgb(36, 36, 147);
-        font-weight: bold;
-        font-size: 18px;
-      }
-      main h1 {
-        padding: 20px;
-        text-align: center;
-        letter-spacing: 10px;
-      }
-      hr {
-        padding: 2px;
-        background-color: aliceblue;
-        margin: 100px 0;
-      }
-      .container {
-        display: flex;
-        justify-content: space-between;
-        padding: 100px 20px;
-      }
-      main #guessNum {
-        height: 100px;
-        width: 110px;
-        background-color: aliceblue;
-        position: absolute;
-        top: 190px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: black;
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      main .left-side{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-      }
-      main .left-side form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-      }
-      main .left-side button{
-        font-size: 20px;
-        padding: 0px 18px;
-      }
-      main .left-side input {
-        background-color: transparent;
-        border: 2px solid aliceblue;
-        width: 100px;
-        height: 100px;
-        color: aliceblue;
-        text-align: center;
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
-      main .right-side {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 30px;
-      }
-      main .right-side p:nth-child(1){
-        margin-bottom: 30px;
-      }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.928);
+  color: aliceblue;
+}
+header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+}
+header button {
+  /* background-color: white; */
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+header button span {
+  color: rgb(36, 36, 147);
+  font-weight: bold;
+  font-size: 18px;
+}
+main h1 {
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 10px;
+}
+hr {
+  padding: 2px;
+  background-color: aliceblue;
+  margin: 100px 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 20px;
+}
+main #guessNum {
+  height: 100px;
+  width: 110px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .left-side {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+main .left-side form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+main .left-side button {
+  font-size: 20px;
+  padding: 0px 18px;
+  font-weight: bold;
+}
+main .left-side input {
+  background-color: transparent;
+  border: 2px solid aliceblue;
+  width: 100px;
+  height: 100px;
+  color: aliceblue;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+main .right-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+main .right-side p:nth-child(1) {
+  margin-bottom: 30px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@media (max-width: 717px) {
+  header {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+  main h1 {
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 10px;
+  }
+  main #guessNum {
+    top: 264px;
+  }
+  .container {
+    padding: 40px 10px;
+  }
+  main .right-side {
+    font-size: 20px;
+  }
+}

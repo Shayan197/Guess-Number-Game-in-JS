@@ -18,7 +18,10 @@ checkBtn.addEventListener("click", function () {
   event.preventDefault();
   let randomNum = Math.floor(Math.random() * 20) + 1;
   let userGuess = Number(boxNum.value);
-  if (checkInput()) {
+  if (boxNum.value > 20 || boxNum.value < 1) {
+    textChn("enter number greater than 0 and smaller than 21");
+    boxNum.innerHTML = null;
+  } else if (checkInput()) {
     if (userGuess === randomNum) {
       textChn("You Win - Click on play again button for playing again");
       guessNum.innerHTML = randomNum;
@@ -26,6 +29,7 @@ checkBtn.addEventListener("click", function () {
       highScor = 0;
       checkBtn.disabled = true;
       playAgain.disabled = false;
+      document.body.style.backgroundColor = "green";
     } else if (userGuess < randomNum) {
       textChn("Grater but almost near");
       lowScore.innerHTML = --score;
@@ -45,16 +49,17 @@ checkBtn.addEventListener("click", function () {
 });
 
 playAgain.addEventListener("click", function () {
-    guessNum.innerHTML = "";
-    boxNum.value = null;
-    lowScore.innerHTML = score;
-    highScore.innerHTML = highScor;
-    textChn("Start Guessing ...");
-    checkBtn.disabled = false;
-    playAgain.disabled = true;
-    score = 20;
-    highScor = 0;
-  });
+  guessNum.innerHTML = "?";
+  boxNum.value = null;
+  lowScore.innerHTML = score;
+  highScore.innerHTML = highScor;
+  textChn("Start Guessing ...");
+  checkBtn.disabled = false;
+  playAgain.disabled = true;
+  score = 20;
+  highScor = 0;
+  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.928)";
+});
 
 function textChn(text) {
   textChnger.innerHTML = text;
