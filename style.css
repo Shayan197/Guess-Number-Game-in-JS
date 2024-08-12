@@ -13,10 +13,19 @@
         justify-content: space-between;
         font-size: larger;
       }
-      header div {
-        background-color: aliceblue;
+      header button {
+        /* background-color: white; */
         color: black;
-        padding: 5px 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      header button span{
+        color: rgb(36, 36, 147);
+        font-weight: bold;
+        font-size: 18px;
       }
       main h1 {
         padding: 20px;
@@ -47,7 +56,13 @@
         align-items: center;
         justify-content: center;
       }
-      main .left-side {
+      main .left-side{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+      main .left-side form {
         display: flex;
         flex-direction: column;
         width: 100%;

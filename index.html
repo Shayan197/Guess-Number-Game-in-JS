@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Guess Number</title>
   </head>
   <body>
     <header>
-      <div>Again!</div>
+      <button id="">Wanna Play Again! <span>Click Here</span></button>
       <p>(between 1 & 20)</p>
     </header>
     <main>
@@ -17,8 +17,10 @@
       <div id="guessNum">?</div>
       <div class="container">
         <div class="left-side">
-          <input type="number" id="boxNum" />
-          <button id="chk-btn">Check!</button>
+          <form action="">
+            <input type="number" id="boxNum" required />
+            <button id="chk-btn">Check!</button>
+          </form>
         </div>
         <div class="right-side">
           <div>
